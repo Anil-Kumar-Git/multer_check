@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 9040
-CMD [ "node", "indes.js" ]
+CMD [ "node", "index.js" ]
