@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 
 app.post('/image', upload.single('img'), function (req, res, next) {
 
-    const imageURL =`http://localhost:9040/${req.file.path}`
+    const imageURL =`https://test-node-prod-image-uploader-io4l96.mo1.mogenius.io/${req.file.path}`
 
     return res.json({
         massage:"image uploadeed ",
