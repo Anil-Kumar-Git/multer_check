@@ -28,11 +28,10 @@ var upload = multer({ storage: storage })
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
-// const upload = multer({ dest: "uploads/" });
 
 app.post('/image', upload.single('img'), function (req, res, next) {
 
-    const imageURL =`http://localhost:9040/${req.file.path}`
+    const imageURL =`https://multer-check-prod-nes-image-dlfuiy.mo1.mogenius.io/${req.file.path}`
        console.log(imageURL,'imageURL');
     return res.json({
         massage:"image uploadeed ",
