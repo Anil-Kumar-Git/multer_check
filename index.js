@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 app.post('/image', upload.single('img'), function (req, res, next) {
 
     const imageURL =`http://localhost:9040/${req.file.path}`
-console.log(imageURL,'imageURL');
+       console.log(imageURL,'imageURL');
     return res.json({
         massage:"image uploadeed ",
         path:imageURL
