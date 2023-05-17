@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const multer = require("multer");
-const port = 9040
+const port = 3001
 var bodyParser = require('body-parser')
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
