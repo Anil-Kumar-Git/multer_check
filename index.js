@@ -29,12 +29,12 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
   })
 
-app.post('/image', upload.single('img'), function (req, res, next) {
+app.post('/image', upload.single('file'), function (req, res, next) {
 
     const imageURL =`https://multer-check-prod-nes-image-dlfuiy.mo1.mogenius.io/${req.file.path}`
        console.log(imageURL,'imageURL');
     return res.json({
-        massage:"image uploadeed ",
+        massage:"image uploadeed",
         path:imageURL
     })
     
