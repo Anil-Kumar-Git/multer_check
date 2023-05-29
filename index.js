@@ -1,9 +1,11 @@
 
 const express = require('express')
+var cors = require('cors')
 const app = express()
 const multer = require("multer");
 const port = 9040
 var bodyParser = require('body-parser')
+app.use(cors())
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
