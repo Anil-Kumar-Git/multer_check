@@ -35,13 +35,18 @@
     })
 
   app.post('/image', upload.single('file'), function (req, res, next) {
-
+    try {
+      console.log(req.file,"req.file")
       const imageURL =`https://multer-check-prod-nes-image-dlfuiy.mo1.mogenius.io/${req.file.path}`
-        console.log(imageURL,'imageURL');
-      return res.json({
-          massage:"image uploadeed",
-          path:imageURL
-      })   
+      console.log(imageURL,'imageURL');
+    return res.json({
+        massage:"image uploadeed",
+        path:imageURL
+    }) 
+    } catch (error) {
+      console.log(error,'error');
+    }
+      
     })
     
   app.listen(port, () => {
